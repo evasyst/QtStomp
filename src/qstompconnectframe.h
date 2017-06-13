@@ -8,8 +8,10 @@ class QStompConnectFramePrivate;
 class QStompConnectFrame : public QStompFrame {
 
     public:
-        QStompConnectFrame(const QString &hostName, const QString &login, const QString &passCode);
-        virtual ~QStompConnectFrame();
+//        QStompConnectFrame(const QString &hostName, const QString &login, const QString &passCode);
+    QStompConnectFrame(const QString &hostName, int heartbeat = 0);
+
+    virtual ~QStompConnectFrame();
 
     protected:
         QStompConnectFrame(QStompConnectFramePrivate &dd);

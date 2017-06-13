@@ -15,6 +15,7 @@ class QStompFrame {
 
     public:
         explicit QStompFrame(QtStomp::Command command);
+        QStompFrame(const QString &frame);
         virtual ~QStompFrame();
 
         void setHeader(const QString &headerName, const QString &headerValue);
@@ -29,7 +30,7 @@ class QStompFrame {
 
         bool isReceiptRequested() const;
         void setReceiptRequested(bool receiptRequested);
-
+        QtStomp::Command getCommand();
     protected:
         QString commandString() const;
 

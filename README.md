@@ -1,7 +1,23 @@
-QtStomp
-=======
+# README #
 
-Qt5 Implementation of STOMP 1.2 Client Protocol
+Adapted from [https://github.com/grundleborg/QtStomp](https://github.com/grundleborg/QtStomp) - Thanks!
 
-** This library is incomplete, and whilst it might possibly be interesting to look at for inspiration, it's not in a fit state to use directly as a library. I no longer have any need for it, but I'm leaving it online anyway in case it's of interest to someone else who finds themselves starting a similar project. **
+Implements a wrapper around original classes `QtStompWrapper.cls`
 
+* Can be added to QML
+* Headers should be the same as authentication to STOMP Websocket
+`Authorization: Basic _TOKEN_`
+
+STOMP appears to be most commonly associated with Java Spring/Websockets: 
+https://docs.spring.io/spring/docs/current/spring-framework-reference/html/websocket.html
+
+Of Note:
+
+(Guides)[https://spring.io/guides/gs/messaging-stomp-websocket/] expect WS support in spring to use `.withSockJS()`, this conflicts with this implementation
+as QtStomp uses a TCP-Socket so there is no HTTP->301 Upgrade request required, just open the TCP Socket directed at your endpoint and start sending encoded (STOMP Protocol messages)[https://stomp.github.io/]
+
+## To Do ##
+* Clean-up some of the more "complicated" methods / repetitive functions / as this was mostly implemented when I was relatively new to Qt.
+* Implement client-side heartbeats loop (right now server just sends heart-beats)
+* Libraritize classes for other uses
+ 

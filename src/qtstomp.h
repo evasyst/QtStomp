@@ -46,6 +46,15 @@ namespace QtStomp {
     const QString HeaderHost("host");
     const QString HeaderLogin("login");
     const QString HeaderPassCode("pass-code");
+    const QString HeaderHeartbeat("heart-beat");
+    const QString HeaderVersion("version");
+    const QString HeaderUsername("user-name");
+    const QString HeaderId("id");
+    const QString HeaderDestination("destination");
+    const QString HeaderContent("content-type");
+    const QString HeaderLen("content-length");
+    const QString HeaderSubscription("subscription");
+    const QString HeaderMsg("message");
 }
 
 #endif // QT_STOMP_H
