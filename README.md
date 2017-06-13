@@ -13,8 +13,8 @@ https://docs.spring.io/spring/docs/current/spring-framework-reference/html/webso
 
 Of Note:
 
-(Guides)[https://spring.io/guides/gs/messaging-stomp-websocket/] expect WS support in spring to use `.withSockJS()`, this conflicts with this implementation
-as QtStomp uses a TCP-Socket so there is no HTTP->301 Upgrade request required, just open the TCP Socket directed at your endpoint and start sending encoded (STOMP Protocol messages)[https://stomp.github.io/]
+[Guides](https://spring.io/guides/gs/messaging-stomp-websocket/) expect WS support in spring to use `.withSockJS()`, this conflicts with this implementation
+as QtStomp uses a TCP-Socket so there is no HTTP->301 Upgrade request required, just open the TCP Socket directed at your endpoint and start sending encoded [STOMP Protocol messages](https://stomp.github.io/)
 
 ## To Do ##
 * Clean-up some of the more "complicated" methods / repetitive functions / as this was mostly implemented when I was relatively new to Qt.
