@@ -1,6 +1,6 @@
 {
   "name": "com.evasyst.qtstomp",
-  "description": "",
+  "description": "Qt5 Implementation of STOMP 1.2 Client Protocol",
   "author": {
     "name": "Jordan Baucke",
     "email": "jordan@evasyst.com"
@@ -18,5 +18,5 @@
   ],
   "license": "MIT",
   "pri_filename": "com_evasyst_qtstomp.pri",
-  "webpage": ""
+  "webpage": "https://www.github.com/evasyst"
 }

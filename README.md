@@ -1,4 +1,4 @@
-# README #
+# QtStomp #
 
 Adapted from [https://github.com/grundleborg/QtStomp](https://github.com/grundleborg/QtStomp) - Thanks!
 
@@ -21,3 +21,4 @@ as QtStomp uses a TCP-Socket so there is no HTTP->301 Upgrade request required, 
 * Implement client-side heartbeats loop (right now server just sends heart-beats)
 * Libraritize classes for other uses
 * tests most likely no longer work
+* cmake is broken as well
