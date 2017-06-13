@@ -2,7 +2,7 @@ import QtQuick 2.6
 import QtQuick.Window 2.2
 import com.evasyst.QtStomp 4.6
 import QtQuick.Controls 1.4
-import "qrc:/network.js" as NetworkService
+import "qrc:/com/evasyst/qtstomp/network.js" as NetworkService
 
 Window {
     id: root

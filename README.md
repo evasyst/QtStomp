@@ -20,4 +20,4 @@ as QtStomp uses a TCP-Socket so there is no HTTP->301 Upgrade request required, 
 * Clean-up some of the more "complicated" methods / repetitive functions / as this was mostly implemented when I was relatively new to Qt.
 * Implement client-side heartbeats loop (right now server just sends heart-beats)
 * Libraritize classes for other uses
- 
+* tests most likely no longer work

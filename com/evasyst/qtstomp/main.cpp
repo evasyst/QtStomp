@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     QtStompWrapper::qmlRegisterType();
 
     QQmlApplicationEngine engine;
-    engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
+    engine.load(QUrl(QStringLiteral("qrc:/com/evasyst/qtstomp/main.qml")));
 
     return app.exec();
 }

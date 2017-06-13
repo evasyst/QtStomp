@@ -1,0 +1,22 @@
+{
+  "name": "com.evasyst.qtstomp",
+  "description": "",
+  "author": {
+    "name": "Jordan Baucke",
+    "email": "jordan@evasyst.com"
+  },
+  "repository": {
+    "type": "GITHUB",
+    "url": "https://github.com/evasyst/QtStomp.git"
+  },
+  "version": {
+    "label": "4.6.0",
+    "revision": "",
+    "fingerprint": ""
+  },
+  "dependencies": [
+  ],
+  "license": "MIT",
+  "pri_filename": "com_evasyst_qtstomp.pri",
+  "webpage": ""
+}
