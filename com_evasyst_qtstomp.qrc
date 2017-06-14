@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="/">
+    <qresource prefix="/com/evasyst/qtstomp">
         <file>qmldir</file>
         <file>main.qml</file>
         <file>network.js</file>
