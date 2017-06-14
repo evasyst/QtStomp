@@ -3,7 +3,7 @@
 
 #include <QtCore/QString>
 #include <QtCore/QVector>
-#include <qtstompwrapper.h>
+#include "qtstompwrapper.h"
 
 class QQmlEngine;
 
