@@ -8,6 +8,8 @@
 #include <QWebSocket>
 #include <QNetworkRequest>
 
+namespace com { namespace evasyst { namespace QtStomp {
+
 class QStompConnectionPrivate {
     public:
         virtual ~QStompConnectionPrivate() { }
@@ -267,3 +269,5 @@ void QStompConnection::onTextMessageRecieved(const QString &message){
 void QStompConnection::onBinaryMessageRecieved(const QByteArray &message){
     qDebug() << "Message Recieved: "+message;
 }
+
+}}}

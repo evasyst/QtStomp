@@ -9,6 +9,9 @@
 #include <QtCore/QScopedPointer>
 #include <QtCore/QString>
 
+
+namespace com { namespace evasyst { namespace QtStomp {
+
 class QStompFramePrivate;
 
 class QStompFrame {
@@ -49,8 +52,10 @@ class QStompFrame {
 
         friend class QStompConnection;
 
-        Q_DECLARE_PRIVATE(QStompFrame);
+        Q_DECLARE_PRIVATE(QStompFrame)
 };
+
+}}}
 
 #endif // Q_STOMP_FRAME_H
 

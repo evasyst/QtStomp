@@ -1,8 +1,8 @@
 #include "qstompconnectframe.h"
-
 #include "qstompframe_p.h"
-
 #include <QtCore/QDebug>
+
+namespace com { namespace evasyst { namespace QtStomp {
 
 class QStompConnectFramePrivate : public QStompFramePrivate {
 
@@ -21,4 +21,4 @@ QStompConnectFrame::~QStompConnectFrame()
 
 }
 
-
+}}}

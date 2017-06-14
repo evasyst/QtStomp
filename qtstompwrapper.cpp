@@ -1,25 +1,15 @@
 #include "qtstompwrapper.h"
 #include "qstompconnection.h"
 #include "qstompframebodytext.h"
+#include <QtQml/qqml.h>
+#include <QtQml/QQmlEngine>
+#include <QtCore/QReadWriteLock>
 
+namespace com { namespace evasyst { namespace QtStomp {
 // [9.11.16] Update endpoint to point to staging environment, need to develop a routine to change for PROD [jB]
 const QString QtStompWrapper::resourceaddr = "ws://localhost:8080/ws";
 
 QStompConnection* QtStompWrapper::websocketConnection = 0;
-
-QtStompWrapper* QtStompWrapper::singletonInstanceOfQtStompWrapper = 0;
-/**
- * @brief getQtStompWrapperSingleton
- * @param engine
- * @param scriptEngine
- * @return
- */
-QObject *getQtStompWrapperSingleton(QQmlEngine *engine, QJSEngine *scriptEngine){
-    Q_UNUSED(engine)
-    Q_UNUSED(scriptEngine);
-
-    return QtStompWrapper::getInstance();
-}
 
 /**
  * @brief QtStompWrapper::QtStompWrapper
@@ -44,14 +34,6 @@ QtStompWrapper::QtStompWrapper(QObject *parent) : QObject(parent)
 QtStompWrapper::~QtStompWrapper(){
     if (websocketConnection)
         delete websocketConnection;
-}
-
-/**
- * @brief QtStompWrapper::qmlRegisterType
- */
-void QtStompWrapper::qmlRegisterType()
-{
-    ::qmlRegisterSingletonType<QtStompWrapper>("com.evasyst.QtStomp", 4, 6, "QtStomp", &getQtStompWrapperSingleton);
 }
 
 /**
@@ -298,17 +280,6 @@ void QtStompWrapper::onConnecting()
 }
 
 /**
- * @brief QtStompWrapper::getInstance
- * @return
- */
-QtStompWrapper *QtStompWrapper::getInstance(){
-    if(!singletonInstanceOfQtStompWrapper){
-        singletonInstanceOfQtStompWrapper = new QtStompWrapper();
-    }
-    return singletonInstanceOfQtStompWrapper;
-}
-
-/**
  * @brief QtStompWrapper::sendMessage
  * @param msg
  */
@@ -322,3 +293,4 @@ void QtStompWrapper::sendMessage(const QString &msg){
 
     websocketConnection->sendFrame(frame);
 }
+}}}

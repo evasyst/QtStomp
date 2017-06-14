@@ -6,6 +6,8 @@
 #include <QtCore/QMap>
 #include <QtCore/QString>
 
+namespace com { namespace evasyst { namespace QtStomp {
+
 class QStompFramePrivate {
     public:
         virtual ~QStompFramePrivate() { }
@@ -17,6 +19,7 @@ class QStompFramePrivate {
         QStompFrameBody *body;
 };
 
+}}}
 
 #endif // Q_STOMP_FRAME_P_H
 

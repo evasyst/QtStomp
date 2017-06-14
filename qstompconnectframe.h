@@ -3,6 +3,8 @@
 
 #include "qstompframe.h"
 
+namespace com { namespace evasyst { namespace QtStomp {
+
 class QStompConnectFramePrivate;
 
 class QStompConnectFrame : public QStompFrame {
@@ -17,8 +19,10 @@ class QStompConnectFrame : public QStompFrame {
         QStompConnectFrame(QStompConnectFramePrivate &dd);
 
     private:
-        Q_DECLARE_PRIVATE(QStompConnectFrame);
+        Q_DECLARE_PRIVATE(QStompConnectFrame)
 };
+
+}}}
 
 #endif // Q_STOMP_CONNECT_FRAME_H
 

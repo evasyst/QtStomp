@@ -4,6 +4,8 @@
 #include "qstompframebodytext.h"
 #include <QtCore/QDebug>
 
+namespace com { namespace evasyst { namespace QtStomp {
+
 QStompFrame::QStompFrame(QtStomp::Command command)
     : d_ptr(new QStompFramePrivate)
 {
@@ -266,4 +268,4 @@ QString QStompFrame::encodeHeader(QString headerName, QString headerValue) const
     return headerName + ":" + headerValue;
 }
 
-
+}}}

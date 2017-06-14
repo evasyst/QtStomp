@@ -10,9 +10,13 @@
 
 #include <QtNetwork/QAbstractSocket>
 
+namespace com { namespace evasyst { namespace QtStomp {
+
 class QStompConnectionPrivate;
+class QStompFrame;
 
 class QStompConnection : public QObject {
+
     Q_OBJECT
     Q_DISABLE_COPY(QStompConnection);
 
@@ -64,11 +68,11 @@ class QStompConnection : public QObject {
         void onTextMessageRecieved(const QString &message);
         void onBinaryMessageRecieved(const QByteArray &message);
     private:
-        Q_DECLARE_PRIVATE(QStompConnection);
+        Q_DECLARE_PRIVATE(QStompConnection)
         int m_heartbeat;
         QTimer *hb_timer;
 };
-
+}}}
 #endif // Q_STOMP_CONNECTION_H
 
 

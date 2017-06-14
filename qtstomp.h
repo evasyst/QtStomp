@@ -3,8 +3,11 @@
 
 #include <QtCore/QString>
 #include <QtCore/QVector>
+#include <qtstompwrapper.h>
 
-namespace QtStomp {
+class QQmlEngine;
+
+namespace com { namespace evasyst { namespace QtStomp {
     enum Command {
         CommandConnect = 0,
         CommandStomp,
@@ -55,7 +58,8 @@ namespace QtStomp {
     const QString HeaderLen("content-length");
     const QString HeaderSubscription("subscription");
     const QString HeaderMsg("message");
-}
+
+} } }
 
 #endif // QT_STOMP_H
 

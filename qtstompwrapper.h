@@ -9,6 +9,13 @@
 #include "qstompconnection.h"
 #include "qstompframebodytext.h"
 
+class QQmlEngine;
+
+namespace com { namespace evasyst { namespace QtStomp {
+
+class QStompConnection;
+
+
 class QtStompWrapper : public QObject
 {
     Q_OBJECT
@@ -28,8 +35,8 @@ class QtStompWrapper : public QObject
     Q_PROPERTY(QString lastMessageSubscriptionId READ getLastMessageSubscriptionId WRITE setLastMessageSubscriptionId)
 
 public:
+    QtStompWrapper(QObject *parent=0);
     ~QtStompWrapper();
-
     Q_INVOKABLE void openWebSocket();
     Q_INVOKABLE void disconnectFromServer();
     Q_INVOKABLE void subscribe();
@@ -78,7 +85,6 @@ public:
 
     static const QString resourceaddr;
     static QtStompWrapper* getInstance();
-    static void qmlRegisterType();
 
     QVariantMap getMap() const { return Map; }
     void setMap(QVariantMap map) {
@@ -104,8 +110,6 @@ public slots:
 
 private:
     static QStompConnection* websocketConnection;
-    static QtStompWrapper* singletonInstanceOfQtStompWrapper;
-    explicit QtStompWrapper(QObject *parent = 0);
     QString m_authorization;
     QString m_subscribe_path;
     QString m_endpoint;
@@ -117,5 +121,6 @@ private:
     int m_stomp_state;
     QVariantMap Map;
 };
+}}}
 
 #endif // QTSTOMPWRAPPER_H
